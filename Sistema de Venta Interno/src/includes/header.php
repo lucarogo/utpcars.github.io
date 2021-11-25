@@ -30,7 +30,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="/Servicios/welcome.php" data-toggle="modal" data-target="#nuevo_pass">Bienvenido</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/Home.html">Inicio</a>
+                    <a class="dropdown-item" href="/index.html">Inicio</a>
                     <a class="dropdown-item" href="/Servicios/welcome.php">Tienda</a>
                 </div>
             </li>
