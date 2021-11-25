@@ -1,0 +1,369 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>JOY SEDÁN&reg;</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+     
+				<!-- Include the Etalage files -->
+					<link rel="stylesheet" href="css/etalage.css">
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							// This is for the dropdown list example:
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="welcome.php"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+								<li class="current"><a href="shop.html">Vehiculos</a></li>
+								<li><a href="Tienda.html">Tienda</a></li>
+								<li><a href="Diseño.html">Diseños</a></li>
+								<li><a href="experiance.html">Seguro</a></li>
+								<li><a href="Ofertas.html">Ofertas</a></li>
+								<li><a href="KITS.html">Kits</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				   <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+				    <ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="TOYOTA GT86.html">TOYOTA GT86</a></h4><span class="actual">1 x
+							34.490€</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Check out</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 single_left">
+				   <div class="single_image">
+					     <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="images/3.3.jpg" />
+									<img class="etalage_source_image" src="images/3.3.jpg" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/4.3.jpg" />
+								<img class="etalage_source_image" src="images/4.3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/5.3.jpg" />
+								<img class="etalage_source_image" src="images/5.3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/6.3.jpg" />
+								<img class="etalage_source_image" src="images/6.3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/7.3.jpg" />
+								<img class="etalage_source_image" src="images/7.3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/8.3.jpg" />
+								<img class="etalage_source_image" src="images/8.3.jpg" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/9.3.jpg" />
+								<img class="etalage_source_image" src="images/9.3.jpg" />
+							</li>
+						</ul>
+					    </div>
+				        <!-- end product_slider -->
+				        <div class="single_right">
+				        	<h3>JOY SEDÁN BLACK</h3>
+				        	<p class="m_10">Si buscas un carro espacioso y versátil, aquí tienes la mejor opción: el Joy Sedán Black. Además de brindar más comodidad a toda tu familia, viene equipado con aire acondicionado, Bluetooth, 2 parlantes y vidrios eléctricos delanteros.</p>
+				        	<ul class="options">
+								<h4 class="m_12">Select a Version</h4>
+								<li><a href="#">JOY SEDÁN 1.4 BLACK MT</a></li>
+								<li><a href="#">JOY SEDÁN 1.4 BLACK MT SMART</a></li>
+							</ul>
+				        	<ul class="product-colors">
+								<h3>available Colors</h3>
+								<li><a class="color1" href="#"><span> </span></a></li>
+								<li><a class="color2" href="#"><span> </span></a></li>
+								<li><a class="color3" href="#"><span> </span></a></li>
+								<li><a class="color4" href="#"><span> </span></a></li>
+								<li><a class="color5" href="#"><span> </span></a></li>
+								<li><a class="color6" href="#"><span> </span></a></li>
+								<div class="clear"> </div>
+							</ul>
+							<div class="btn_form">
+							   <form action="/Sistema de Venta Interno/src/ventas.php">
+								 <input type="submit" value="buy now" title="">
+							  </form>
+							</div>
+							<ul class="add-to-links">
+    			              <li><img src="images/wish.png" alt=""><a href="#">Add to wishlist</a></li>
+    			            </ul>
+							<div class="social_buttons">
+								<h4>95 Items</h4>
+								<button type="button" class="btn1 btn1-default1 btn1-twitter" onclick="">
+					              <i class="icon-twitter"></i> Tweet
+					            </button>
+					            <button type="button" class="btn1 btn1-default1 btn1-facebook" onclick="">
+					              <i class="icon-facebook"></i> Share
+					            </button>
+					             <button type="button" class="btn1 btn1-default1 btn1-google" onclick="">
+					              <i class="icon-google"></i> Google+
+					            </button>
+					            <button type="button" class="btn1 btn1-default1 btn1-pinterest" onclick="">
+					              <i class="icon-pinterest"></i> Pinterest
+					            </button>
+					        </div>
+				        </div>
+				        <div class="clear"> </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="box-info-product">
+					<p class="price2">$ 10,090</p>
+					       <ul class="prosuct-qty">
+								<span>Quantity:</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+							</ul>
+							<button type="submit" name="Submit" class="exclusive">
+							   <span>Disponible</span>
+							</button>
+				   </div>
+			   </div>
+			</div>		
+			<div class="desc">
+				
+			   	<h4>Lleva el confort y la practicidad siempre contigo</h4>
+			   	<p>En viajes largos o cortos, dentro del Chevrolet Joy Sedán Black tu familia podrá aprovechar la comodidad de su amplio espacio interior, la temperatura ideal y la facilidad de los vidrios eléctricos.</p>
+			</div>
+
+			<div class="desc">
+				<h4>¿Cuál es tu camino?</h4>
+				<p>Chevrolet Joy Sedán Black está preparado para todos ellos. Además de la comodidad, también combina eficiencia y ahorro. Con este modelo aprovechas todo eso a través de la precisión de la dirección hidráulica y cambio manual de cinco velocidades.</p>
+			</div>
+			<div class="desc">
+				<h4>Seguridad por todos los caminos</h4>
+				<p>Siéntete seguro al manejar el Chevrolet Joy Sedán Black con luz de posición LED, 2 airbags, sistema de frenos ABS y sistema de distribución de frenado (EBD), alerta sonora para el cinturón de seguridad y sistema de anclaje Isofix & Top Tether.</p>
+			</div>
+
+			<div class="row">
+				<h4 class="m_11">Tambien te podria interesar: </h4>
+				<div class="col-md-4 product1">
+					<img src="images/s2.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="CAMARO.html">
+						</a><h3><a href="CAMARO.html"></a><a href="CAMARO.html">CAMARO V8 SS AT</a></h3>
+						<p>El Camaro fue rediseñado de principio a fin. Su l...</p>
+						<span class="actual">$ 56,990</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="shop_btn"><a href="CAMARO.html">Read More</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</div>
+				<div class="col-md-4 product1">
+					<img src="images/s1.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="TOYOTA GT86.html">
+						</a><h3><a href="TOYOTA GT86.html"></a><a href="TOYOTA GT86.html">TOYOTA GT86</a></h3>
+						<p>El Toyota GT86 es un coche deportivo de tamaño...</p>
+						<span class="reducedfrom">40.220€</span>
+						<span class="actual">34.490€</span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="shop_btn"><a href="TOYOTA GT86.html">Read More</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</div>
+				<div class="col-md-4 product1">
+					<img src="images/s3.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="ONIX SEDÁN.html">
+						</a><h3><a href="ONIX SEDÁN.html"></a><a href="ONIX SEDÁN.html">ONIX SEDÁN</a></h3>
+						<p>El Onix Sedán está equipado con una serie de carac...</p>
+						<span class="reducedfrom">$ 24,490 </span>
+						<span class="actual">$ 12,490 </span><br>
+						<ul class="buttons">
+							<li class="cart"><a href="#">Add To Cart</a></li>
+							<li class="shop_btn"><a href="ONIX SEDÁN.html">Read More</a></li>
+							<div class="clear"> </div>
+					    </ul>
+				    </div>
+				</div>
+			</div>	
+	     </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Servicios</h4>
+							<li><a href="#">Tienda</a></li>
+							<li><a href="#">Diseños</a></li>
+							<li><a href="#">Seguro</a></li>
+							<li><a href="#">Kits</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>SIGUENOS</h4>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">YouTube</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>SOPORTE</h4>
+							<li><a href="#">Contactenos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   				</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+						<p>Design: <a href="http://w3layouts.com" target="_blank">Grupo 6</a></p>
+		            </div>
+					  <dl id="sample" class="dropdown">
+				        <dt><a href="#"><span>Change Region</span></a></dt>
+				        <dd>
+				            <ul>
+				                <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
+				                <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
+				                <li><a href="#">Newziland<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+				                <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+				                <li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
+				                <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
+				            </ul>
+				         </dd>
+	   				  </dl>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
